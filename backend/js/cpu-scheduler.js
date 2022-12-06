@@ -478,44 +478,27 @@ $(document).ready(function () {
 	//First Come First Served function
 	function FCFS() {
 		sortArriveTimes();
-
-
 		for (var i = 0; i < processArray.length; i++) {
 			fillGaps();
-
 			bar.addItem(processArray[i].processName, processArray[i].burstTime);
-
 			processArray[i].finished();
 		}
-
-
-
-
 	}
+
 	function SJF() {
 		sortArriveTimes();
-
 		while (isDone() == false) {
-
 			fillGaps();
-
 			var i = findSmallestBurstIndex();
-
 			bar.addItem(processArray[i].processName, processArray[i].burstTime);
-
 			processArray[i].finished();
-
 		}
-
 	}
 
 	//Shortes Remaining Job First algorithm
 	function SRJF() {
-
-
 		function findNextJump(proccessIndex) {
 			var interruptFound = false;
-
 			for (var i = 0; i < processArray.length; i++) {
 				if (processArray[i].done == false
 					&& processArray[i].arrivalTime < position + processArray[proccessIndex].burstTime
@@ -530,35 +513,19 @@ $(document).ready(function () {
 					interruptFound = true;
 					break;
 				}
-
-
 			}
-
 			if (interruptFound == false) {
 				bar.addItem(processArray[proccessIndex].processName, processArray[proccessIndex].burstTime);
 				processArray[proccessIndex].finished();
 			}
-
 		}
-
 		sortArriveTimes();
 		while (isDone() == false) {
-
-
 			fillGaps();
-
 			var i = findSmallestBurstIndex();
-
 			// console.log("starting:"+processArray[i].processName);
-
 			findNextJump(i);
-
-
-
-
-
 		}
-
 	}
 
 	function priority() {
