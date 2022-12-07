@@ -383,8 +383,8 @@ var avg_waitingtime = 0;
 var avg_tat = 0;
 function averagetime() {
   for (let i = 0; i < mainOutput.waitingTime.length; i++) {
-    avg_waitingtime = + mainOutput.waitingTime[i];
-    avg_tat = + mainOutput.turnAroundTime[i];
+    avg_waitingtime += mainOutput.waitingTime[i];
+    avg_tat += mainOutput.turnAroundTime[i];
   }
   let avgwt = document.getElementById("avgwt");
   avgwt.innerHTML = avg_waitingtime;
