@@ -256,25 +256,8 @@
           </div>
 
 
-          <div style="margin-top:20px; ">
-            <label>Context Switch Time:</label>
-          </div>
-          <div class="input-group">
-            <span class="input-group-btn">
-              <button id="subtract_context" type="button" class="btn btn-default btn-number" data-type="minus"
-                data-field="quant[1]">
-                <span class="glyphicon glyphicon-minus"></span>
-              </button>
-            </span>
-            <input id="enter_context" type="text" name="quant[1]" class="form-control input-number" value="0.0"
-              style="background-color:white">
-            <span class="input-group-btn">
-              <button id="add_context" type="button" class="btn btn-default btn-number" data-type="plus"
-                data-field="quant[1]">
-                <span class="glyphicon glyphicon-plus"></span>
-              </button>
-            </span>
-          </div>
+
+          
 
           <div class="hidden" id="solver_group">
             <div style="margin-top:20px; ">
@@ -358,7 +341,7 @@
 
 
     <div class="datavisulization">
-    <h2 style="text-align: center; margin-bottom: 40px;">Data Visulization</h2>
+    <!-- <h2 style="text-align: center; margin-bottom: 40px;">Data Visulization</h2> -->
 
 
     <!-- <div class="barChart">
@@ -367,38 +350,11 @@
 
     <hr>
     <div class="pie" id="chartdiv">
-      <div class="first">
-        <div class="chartMenu">
-          <p>Waiting Time Chart</p>
-        </div>
-        <div class="chartCard">
-          <div class="chartBox">
-            <canvas id="myChart" width="400" height="400"></canvas>
-            <!-- <canvas id="myChart"></canvas> -->
-          </div>
-        </div>
 
-
-      </div>
-      <div class="second">
-        <div class="chartMenu">
-          <p>Turn around Time Chart</p>
-        </div>
-        <div class="chartCard">
-          <div class="chartBox">
-            <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
-            <canvas id="mytatChart" width="400" height="400"></canvas>
-          </div>
-        </div>
-
-      </div>
     </div>
   </div>
 
 
-    <span style="font-size: large; color: rgb(3, 27, 94);">CPU Utilization:
-      <div id="utilization" style="color:rgba(255, 26, 104, 1);"></div>
-    </span>
     <span style="font-size: large; color: rgb(3, 27, 94);">Average waiting time:
       <div id="avgwt" style="color:rgba(255, 26, 104, 1);"></div>
     </span>
